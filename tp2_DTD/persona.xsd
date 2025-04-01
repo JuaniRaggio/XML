@@ -4,7 +4,7 @@
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Masculino"/>
 			<xsd:enumeration value="Femenino"/>
-	</xsd:restriction>
+    </xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="weight">
 			<xsd:restriction base="xsd:decimal">

@@ -1,0 +1,18 @@
+Cumple
+No valida pues el DNI tiene un . que no es un caracter valido
+No valida por el sexo
+No valida porque el peso se excede de la restriccion
+No valida por el telefono
+No valida por el type invalido Loft
+No valida por el number
+No valida porque le falta un atributo a direccion
+OJO PORQUE Sequence para validar tiene que respetar el orden predispuesto
+Si valida
+No valida
+NO Valida -> Es el del string que EMPIEZA CON NEWLINE
+No valida -> Formato de ffecha invalido
+No valida -> Mes invalido
+No valida -> Formato de fecha invalido, tiene / en vez de -
+No valida -> CUIL tiene que ser un integer y esta VACIO
+Si valida
+No valida -> El peso esta excedido y ademas es invalido pues pedian como maximo 2 decimal numbers y estan pasando 3
