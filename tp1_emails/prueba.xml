@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<libro>
+    <ISBN>0-079-13702-4</ISBN>
+    <titulo>XML Complete </titulo>
+    <!--habría que indicar la moneda del precio, no? -->
+    <precio>300</precio>
+</libro>
