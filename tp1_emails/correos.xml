@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<emails xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="emails.xsd">
+    <email>
+        <date>2023-11-05</date>
+        <header>
+            <from>
+                <name>María López</name>
+                <address>maria.lopez@example.com</address>
+            </from>
+            <to>
+                <name>Carlos Gómez</name>
+                <address>carlos.gomez@empresa.com</address>
+            </to>
+        </header>
+        <subject>Confirmación de Reunión</subject>
+        <body>Hola Carlos, te confirmo la reunión del próximo lunes a las 10:00 AM. Saludos, María.</body>
+    </email>
+    
+    <email>
+        <date>2023-10-30</date>
+        <header>
+            <from>
+                <name>Ana Torres</name>
+                <address>ana.torres@universidad.edu</address>
+            </from>
+            <to>
+                <name>Pedro Sánchez</name>
+                <address>pedro.sanchez@empresa.com</address>
+            </to>
+        </header>
+        <subject>Recordatorio Entrega Proyecto</subject>
+        <body>Estimado Pedro, recuerda que el proyecto debe entregarse el 5 de noviembre. Saludos, Ana.</body>
+    </email>
+    
+    <email>
+        <date>2023-11-01</date>
+        <header>
+            <from>
+                <name>Lucía Fernández</name>
+                <address>lucia.fernandez@servicio.com</address>
+            </from>
+            <to>
+                <name>Sofía Ramírez</name>
+                <address>sofia.ramirez@empresa.com</address>
+            </to>
+        </header>
+        <subject>Felicitaciones por el Ascenso</subject>
+        <body>¡Felicidades Sofía por tu nuevo puesto! Esperamos seguir colaborando. Saludos, Lucía.</body>
+    </email>
+</emails>
