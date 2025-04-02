@@ -1,64 +1,85 @@
 <?xml version="1.0"?>
-
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:simpleType name="sex">
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="Masculino"/>
-			<xsd:enumeration value="Femenino"/>
+  <xsd:simpleType name="sex">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Masculino"/>
+      <xsd:enumeration value="Femenino"/>
     </xsd:restriction>
-	</xsd:simpleType>
+  </xsd:simpleType>
 
   <!-- They aren't telling us if the 500 cap is 500kg or what unit, so i'll accept -->
   <!-- 500 as cap for every unit doing an extra function for this would be the best option -->
   <!-- its not a real situation but else i'll be doing a hudge regex and its not the idea -->
-	<xsd:simpleType name="weight">
+  <xsd:simpleType name="weight">
     <xsd:restriction base="xsd:string">
       <xsd:pattern value="(([0-4]?[0-9]{0,2}{\.[0-9]{1,2}}?)|(500)) (([km]?g)|(N))?">
-    </xsd:restriction>
-	</xsd:simpleType>
+      </xsd:restriction>
+    </xsd:simpleType>
 
-	<xsd:simpleType name="telephone">
-		<xsd:restriction base="xsd:string" >
-			<xsd:pattern value="\d{4}-\d{4}" />
-		</xsd:restriction>
-	</xsd:simpleType>
+    <xsd:simpleType name="particular_phone">
+      <xsd:restriction base="xsd:string" >
+        <xsd:pattern value="\d{4}-\d{4}"/>
+      </xsd:restriction>
+    </xsd:simpleType>
 
-  <xsd:simpleType name="housing_description">
-    <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Casa"/>
-      <xsd:enumeration value="Departamento"/>
-    </xsd:restriction>
-  </xsd:simpleType>
+    <xsd:simpleType name="cellphone">
+      <xsd:restriction base="xsd:string" >
+        <xsd:pattern value="11-\d{4}-\d{4}"/>
+      </xsd:restriction>
+    </xsd:simpleType>
 
-	<xsd:complexType name="address">
-		<xsd:sequence>
-			<xsd:element name="street" type="xsd:string"/>
-			<xsd:element name="number" type="xsd:integer"/>
-			<xsd:element name="zipcode" type="xsd:integer"/>
-      <xsd:element name="type" type="housing_description"/>
-		</xsd:sequence>
-  </xsd:complexType>
+    <xsd:complexType name="telephone">
+      <xsd:choice>
+        <xsd:all>
+          <xsd:element name="pp" type="particular_phone"/>
+          <xsd:element name="cp" type="cellphone"/>
+        </xsd:all>
+        <xsd:element name="pp" type="particular_phone"/>
+        <xsd:element name="cp" type="cellphone"/>
+      </xsd:choice>
+    </xsd:complexType>
 
-	<xsd:complexType name="identificador">
-		<xsd:choice>
-			<xsd:element name="DNI" type="xsd:integer"/>
-			<xsd:element name="CUIL" type="xsd:integer"/>
-		</xsd:choice>
-	</xsd:complexType>
+    <!-- No se como hacer para que tenga que aparecer si o si uno de los dos pero -->
+    <!-- no aparezcan los dos a la vez -->
+    <!-- Una vez que el usuario elige uno, no se como hacer para descartarlo -->
+    <!-- Y dice que tanto si aparece solo cellphone o particular_phone, es valido -->
 
-	<xsd:element name="persona">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element name="identificador" type="identificador"/>
-				<xsd:element name="nombre" type="xsd:string"/>
-				<xsd:element name="apellido" type="xsd:string"/>
-				<xsd:element name="fechaNac" type="xsd:date"/>
-				<xsd:element name="sexo" type="sex"/>
-				<xsd:element name="peso" type="weight"/>
-				<xsd:element name="telefono" type="telephone"/>
-				<xsd:element name="direccion" type="address"/>
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
+    <xsd:simpleType name="housing_description">
+      <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="Casa"/>
+        <xsd:enumeration value="Departamento"/>
+      </xsd:restriction>
+    </xsd:simpleType>
 
-</xsd:schema>
+    <xsd:complexType name="address">
+      <xsd:all>
+        <xsd:element name="street" type="xsd:string"/>
+        <xsd:element name="number" type="xsd:integer"/>
+        <xsd:element name="zipcode" type="xsd:integer"/>
+        <xsd:element name="type" type="housing_description"/>
+      </xsd:all>
+    </xsd:complexType>
+
+    <xsd:complexType name="identificador">
+      <xsd:choice>
+        <xsd:element name="DNI" type="xsd:integer"/>
+        <xsd:element name="CUIL" type="xsd:integer"/>
+      </xsd:choice>
+    </xsd:complexType>
+
+    <xsd:element name="persona">
+      <xsd:complexType>
+        <xsd:all>
+          <xsd:element name="identificador" type="identificador"/>
+          <xsd:element name="nombre" type="xsd:string"/>
+          <xsd:element name="apellido" type="xsd:string"/>
+          <xsd:element name="fechaNac" type="xsd:date"/>
+          <xsd:element name="sexo" type="sex"/>
+          <xsd:element name="peso" type="weight"/>
+          <xsd:element name="telefono" type="telephone"/>
+          <xsd:element name="direccion" type="address"/>
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:element>
+
+  </xsd:schema>
