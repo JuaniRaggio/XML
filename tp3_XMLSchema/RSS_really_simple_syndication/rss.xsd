@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:simpleType name="valid_versions">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="(0.9(.1)?)|((1|2).0)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- Dice breve descripcion por lo que creo un simple type para -->
+  <!-- que en el momento que quieran poner un cap, sea sencillo -->
+  <xsd:simpleType name="channel_description">
+    <xsd:restriction base="xsd:string">
+      <!-- Este cap es completamente arbitrario -->
+      <!-- en caso de que se desee que sea mayor, cambiarlo -->
+      <xsd:length value="256"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="mail_type">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[a-zA-Z0-9._-]+@[a-z]+\.com"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="available_languages">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="(es-ar)|(en-us)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="item_type">
+    <xsd:all>
+      <xsd:element name="title" type="xsd:string"/>
+      <xsd:element name="link" type="xsd:anyURI"/>
+      <xsd:element name="pubDate" type="xsd:date"/>
+    </xsd:all>
+  </xsd:complexType>
+
+  <xsd:complexType name="channel_type">
+    <xsd:all>
+      <xsd:element name="title" type="xsd:string"/>
+      <xsd:element name="link" type="xsd:anyURI"/>
+      <xsd:element name="description" type="channel_description"/>
+    </xsd:all>
+    <xsd:element name="pubDate" type="xsd:date" minOccurs="0"/>
+    <xsd:element name="webMaster" type="mali_type" minOccurs="0"/>
+    <xsd:element name="language" type="available_languages" minOccurs="0"/>
+    <xsd:element name="item" type="item_type" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:complexType>
+
+  <xsd:element name="rss">
+    <xsd:complexType>
+      <xsd:attribute name="version" type="valid_versions"/>
+      <!-- Usar sequence no es obligatorio y de momento como solo tenemos -->
+      <!-- un solo elemento no nos importa el orden -->
+      <xsd:element name="channel" type="channel_type"/>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
