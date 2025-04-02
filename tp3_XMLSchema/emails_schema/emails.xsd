@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:complexType name="channel_information">
+    <xsd:sequence>
+      <xsd:simpleType name="name" type="xsd:string"/>
+      <xsd:simpleType name="address">
+        <xsd:restriction base="xsd:string">
+          <!-- Verificacion muy simple -->
+          <xsd:pattern value="[a-zA-Z0-9._-]+@[a-z]+\.com">
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="header_data">
+    <xsd:sequence>
+      <xsd:element name="from" type="">
+      <xsd:element name="to" type="">
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="subject_title">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="256"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="code">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]{10}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:element name="email">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="date" type="xsd:date"/>
+        <xsd:element name="header" type="header_data"/>
+        <xsd:element name="security_code" type="code"/>
+        <xsd:element name="subject" type="subject_title"/>
+        <xsd:element name="body" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
