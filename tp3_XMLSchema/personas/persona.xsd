@@ -29,15 +29,23 @@
     </xsd:simpleType>
 
     <xsd:complexType name="telephone">
-      <xsd:choice>
-        <xsd:all>
-          <xsd:element name="pp" type="particular_phone"/>
-          <xsd:element name="cp" type="cellphone"/>
-        </xsd:all>
-        <xsd:element name="pp" type="particular_phone"/>
-        <xsd:element name="cp" type="cellphone"/>
-      </xsd:choice>
+      <xsd:all>
+        <xsd:element name="pp" type="particular_phone" minOccurs="0"/>
+        <xsd:element name="cp" type="cellphone" minOccurs="0"/>
+      </xsd:all>
+      <xsd:assert test="exists(pp) or exists(cp)"/>
     </xsd:complexType>
+
+    <!-- <xsd:complexType name="telephone"> -->
+    <!--   <xsd:choice> -->
+    <!--     <xsd:all> -->
+    <!--       <xsd:element name="pp" type="particular_phone"/> -->
+    <!--       <xsd:element name="cp" type="cellphone"/> -->
+    <!--     </xsd:all> -->
+    <!--     <xsd:element name="pp" type="particular_phone"/> -->
+    <!--     <xsd:element name="cp" type="cellphone"/> -->
+    <!--   </xsd:choice> -->
+    <!-- </xsd:complexType> -->
 
     <!-- No se como hacer para que tenga que aparecer si o si uno de los dos pero -->
     <!-- no aparezcan los dos a la vez -->
