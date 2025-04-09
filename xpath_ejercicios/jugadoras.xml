@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<olimpiadas2012>
+  <sede>Londres</sede>
+  <selecciones>
+    <seleccion id="e1">
+      <nombre>Las Leonas</nombre>
+      <pais>Argentina</pais>
+      <plantel>
+        <jugadora id="j591"/>
+        <jugadora id="j1753"/>
+      </plantel>
+    </seleccion>
+    <seleccion id="e2">
+      <pais>Argentina</pais>
+      <plantel>
+        <jugadora id="j1800"/>
+        <jugadora id="j754"/>
+      </plantel>
+    </seleccion>
+  </selecciones>
+  <jugadoras>
+    <jugadora id="j591">
+      <nombre>Luciana Aymar</nombre>
+      <edad>36</edad>
+      <fecha-nacimiento>1977-08-10</fecha-nacimiento>
+      <ciudad>Rosario</ciudad>
+      <partidos>7</partidos>
+      <goles>4</goles>
+    </jugadora>
+    <jugadora id="j1753">
+      <nombre>Carla Rebecchi</nombre>
+      <edad>29</edad>
+      <fecha-nacimiento>1984-09-07</fecha-nacimiento>
+      <ciudad>BuenosAires</ciudad>
+      <partidos>6</partidos>
+      <goles>3</goles>
+    </jugadora>
+    <jugadora id="j754">
+      <nombre>Alex Danson</nombre>
+      <edad>29</edad>
+      <fecha-nacimiento>1985-05-21</fecha-nacimiento>
+      <ciudad>Southamptom</ciudad>
+      <partidos>7</partidos>
+      <goles>4</goles>
+    </jugadora>
+    <jugadora id="j1800">
+      <nombre>Crista Cullen</nombre>
+      <edad>28</edad>
+      <fecha-nacimiento>1985-08-20</fecha-nacimiento>
+      <ciudad>Boston</ciudad>
+      <partidos>6</partidos>
+      <goles>5</goles>
+    </jugadora>
+  </jugadoras>
+</olimpiadas2012>
