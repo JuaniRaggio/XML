@@ -12,9 +12,9 @@
   <!-- its not a real situation but else i'll be doing a hudge regex and its not the idea -->
   <xsd:simpleType name="weight">
     <xsd:restriction base="xsd:string">
-      <xsd:pattern value="(([0-4]?[0-9]{0,2}{\.[0-9]{1,2}}?)|(500)) (([km]?g)|(N))?">
-      </xsd:restriction>
-    </xsd:simpleType>
+      <xsd:pattern value="(([0-4]?[0-9]{0,2}{\.[0-9]{1,2}}?)|(500)) (([km]?g)|(N))?"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
     <xsd:simpleType name="particular_phone">
       <xsd:restriction base="xsd:string" >
