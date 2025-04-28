@@ -41,17 +41,17 @@
       <ExplicitData>
         <Concepts>
           <Concept key="Golf" value="0.2" />
-	  <Concept key="Gagdgets" value="0.1" />
-	  <Concept key="Mobile" value="0.1" />
-     	  <Concept key="Politica" value="0.1" />
- 	  <Concept key="Tecnologia" value="0.2" />
-  	  <Concept key="Software" value="0.2" />
+          <Concept key="Gagdgets" value="0.1" />
+          <Concept key="Mobile" value="0.1" />
+          <Concept key="Politica" value="0.1" />
+          <Concept key="Tecnologia" value="0.2" />
+          <Concept key="Software" value="0.2" />
         </Concepts>
         <Sources>
           <Source key="http://feeds.feedburner.com/TechCrunch" name="Techcrunch" type="application/atom+xml" value="0.4">
             <Author key="Techcrunch" value="0.5" />
           </Source>
-	  <Source key="http://www.uberbin.net/feed" name="Uberbin" type="application/rss+xml" value="0.2">
+          <Source key="http://www.uberbin.net/feed" name="Uberbin" type="application/rss+xml" value="0.2">
             <Author key="Denken Uber" value="0.5" />
           </Source>
           <Source key="http://lanacion.com.ar/herramientas/rss/index.asp" name="LaNacion.com" type="application/rss+xml" value="0.3">
