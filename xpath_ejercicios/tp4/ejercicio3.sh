@@ -1,5 +1,6 @@
 # Ej 3.1
 # Promedio del trabajo
+# hoja formulas ejemplo
 xmllint --xpath "sum(APML/Body/Profile[@name='Work']//Concepts/Concept/@value) div count(APML/Body/Profile[@name='Work']//Concepts/Concept/@value)" apml1.xml
 # Promedio del home
 xmllint --xpath "sum(APML/Body/Profile[@name='Home']//Concepts/Concept/@value) div count(APML/Body/Profile[@name='Home']//Concepts/Concept/@value)" apml1.xml

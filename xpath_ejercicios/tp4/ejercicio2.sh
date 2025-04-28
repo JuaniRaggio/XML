@@ -5,6 +5,7 @@ xmllint --xpath "APML/Body/Profile//Concepts/Concept[contains(@*,'business')]" a
 xmllint --xpath "APML/Body/Profile//Concepts/Concept[@value>=0.95]" apml1.xml
 
 # Ej 2.3
+# hoja formulas
 xmllint --xpath "APML/Body/Profile/@name[count(..//Concepts/Concept) < (count(//APML/Body/Profile//Concepts/Concept) div count(//APML/Body/Profile))]" apml1.xml
 
 # Ej 2.4
