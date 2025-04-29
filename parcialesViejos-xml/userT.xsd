@@ -1,0 +1,5 @@
+<xsd:simpleType name="userT">
+  <xsd:restriction base="xsd:string">
+    <xsd:pattern value="@[a-zA-Z0-9_]{,15}"/>
+  </xsd:restriction>
+</xsd:simpleType:>
