@@ -1,0 +1,11 @@
+<!ELEMENT barrios (barrio)*>
+<!ELEMENT barrio (nombre,precioM2,inmuebles,CPs)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precioM2 (#PCDATA)>
+<!ELEMENT inmuebles (inmueble)*>
+<!ELEMENT inmueble (area)>
+<!ELEMENT area (#PCDATA)>
+<!ATTLIST inmueble identificador ID #REQUIRED owner IDREF #REQUIRED codigo_postal IDREF #REQUIRED>
+<!ELEMENT CPs (cp)*>
+<!ATTLIST cp codigo ID #REQUIRED cp owner IDREF #IMPLIED>
+

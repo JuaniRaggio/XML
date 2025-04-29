@@ -1,0 +1,25 @@
+<inmuebles>
+  <xsd:complexType name="barrios">
+    <xsd:complexType name="barrio">
+      <xsd:all>
+        <xsd:element name="nombre" type="xsd:string"/>
+        <xsd:element name="precioM2" type="xsd:float"/>
+      </xsd:all>
+      <xsd:element name="codigoPostal" type="cp" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:unique name="identificador">
+        <xsd:attribute name="identificador" type="ID" use="required"/>
+      </xsd:unique>
+    </xsd:complexType name="barrio">
+  </xsd:complexType>
+  <xsd:key name="identificador"
+
+  <xsd:simpleType name="cp">
+    <xsd:restriction base="xsd:string">
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="inmueble">
+
+  </xsd:complexType>
+
+</inmuebles>
