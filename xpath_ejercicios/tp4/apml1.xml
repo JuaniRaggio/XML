@@ -18,6 +18,8 @@
           <Concept key="intelligent agents" value="0.89" from="GatheringTool.com" updated="2007-03-11T01:55:00Z" />
           <Concept key="development" value="0.87" from="GatheringTool.com" updated="2007-03-11T01:55:00Z" />
           <Concept key="service" value="0.85" from="GatheringTool.com" updated="2007-03-11T01:55:00Z" />
+          <!-- extra para probar algo -->
+          <Concept key="Software" value="0.2" />
         </Concepts>
         <Sources>
           <Source key="http://feeds.feedburner.com/apmlspec" name="APML.org" value="1.00" type="application/rss+xml" from="GatheringTool.com" updated="2007-03-11T01:55:00Z">
