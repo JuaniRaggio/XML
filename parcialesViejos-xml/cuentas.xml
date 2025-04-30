@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<info>
+
+  <clientes>
+    <cliente id="CL0001">
+      <nombre>Marcelo</nombre>
+      <apellido>Gonzalez</apellido>
+      <ingresos_anuales>200000</ingresos_anuales>
+    </cliente>
+    <cliente id="CL0002">
+      <nombre>Alicia</nombre>
+      <apellido>Hertz</apellido>
+      <ingresos_anuales>250000</ingresos_anuales>
+    </cliente>
+    <cliente id="CL0003">
+      <nombre>Marina</nombre>
+      <apellido>Pierini</apellido>
+      <ingresos_anuales>130000</ingresos_anuales>
+    </cliente>
+  </clientes>
+
+  <cuentas>
+    <cuenta id="CTA001" cliente="CL0003">
+      <tipo>caja de ahorro</tipo>
+      <saldo_inicial>2000</saldo_inicial>
+    </cuenta>
+    <cuenta id="CTA002" cliente="CL0002">
+      <tipo>cuenta corriente</tipo>
+      <saldo_inicial>40000</saldo_inicial>
+    </cuenta>
+    <cuenta id="CTA003" cliente="CL0003">
+      <tipo>cuenta corriente</tipo>
+      <saldo_inicial>3000</saldo_inicial>
+    </cuenta>
+  </cuentas>
+
+  <transacciones>
+    <transaccion id="T0034" cuenta="CTA002">
+      <tipo>extraccion</tipo>
+      <fecha>2014/08/01</fecha>
+      <monto>2000</monto>
+    </transaccion>
+    <transaccion id="T0045" cuenta="CTA001">
+      <tipo>deposito</tipo>
+      <fecha>2014/08/01</fecha>
+      <monto>5000</monto>
+    </transaccion>
+    <transaccion id="T0061" cuenta="CTA003">
+      <tipo>deposito</tipo>
+      <fecha>2014/08/03</fecha>
+      <monto>2500</monto>
+    </transaccion>
+    <transaccion id="T0089" cuenta="CTA001">
+      <tipo>extraccion</tipo>
+      <fecha>2014/08/04</fecha>
+      <monto>700</monto>
+    </transaccion>
+    <transaccion id="T0102" cuenta="CTA003">
+      <tipo>extraccion</tipo>
+      <fecha>2014/08/15</fecha>
+      <monto>2000</monto>
+    </transaccion>
+    <transaccion id="T0133" cuenta="CTA001">
+      <tipo>deposito</tipo>
+      <fecha>2014/08/22</fecha>
+      <monto>1400</monto>
+    </transaccion>
+  </transacciones>
+
+</info>

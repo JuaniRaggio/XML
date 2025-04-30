@@ -8,6 +8,8 @@
       <xsd:element name="codigoPostal" type="cp" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:unique name="identificador">
         <xsd:attribute name="identificador" type="ID" use="required"/>
+        <xsd:selector xpath=""/>
+        <xsd:field xpath="">
       </xsd:unique>
     </xsd:complexType name="barrio">
   </xsd:complexType>

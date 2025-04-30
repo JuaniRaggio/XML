@@ -1,0 +1,7 @@
+<!-- No estoy seguro si se espera que sean todos EMPTY, #PCDATA tambien soporta eso -->
+<!ELEMENT song (band,album,year,track?,author+)>
+<!ELEMENT band (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT track (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
